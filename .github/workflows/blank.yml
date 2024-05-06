@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       mod_id: ${{steps.mod_id.outputs.value }}
-      version: ${{steps.mod_id.outputs.version }}
+      version: ${{steps.version.outputs.version }}
 
     steps:
       - name: Checkout
@@ -31,6 +31,11 @@ jobs:
         uses: ciplugins-poc/my-action@v1.0.1
         with:
           who-to-greet: 'action_2'
+
+      - name: Version
+        id: version
+        run: |
+          echo "version=main" >> "$GITHUB_OUTPUT"
 
           
   output:
