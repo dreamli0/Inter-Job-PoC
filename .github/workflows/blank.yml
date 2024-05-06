@@ -24,18 +24,15 @@ jobs:
         id: mod_id
         uses: dreamli0/my-action@main
         with:
-          hi-there: 'my-action'
+          hi-there: 'action_1'
           
-
       - name: Action 2
         id: action_2
         uses: ciplugins-poc/my-action@v1.0.1
         with:
-          path: './gradle.properties'
-          property: 'mod_id'
+          who-to-greet: 'action_2'
 
-      
-
+          
   output:
       name: Output Info
       runs-on: ubuntu-latest
