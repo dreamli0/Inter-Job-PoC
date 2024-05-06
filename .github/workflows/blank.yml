@@ -11,7 +11,7 @@ on:
 jobs:
   info:
     name: Info
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     outputs:
       mod_id: ${{steps.mod_id.outputs.value }}
       version: ${{steps.mod_id.outputs.version }}
@@ -38,7 +38,7 @@ jobs:
 
   output:
       name: Output Info
-      runs-on: ubuntu-lastest
+      runs-on: ubuntu-latest
       needs: [ info ]
       steps:
         - run: echo "${{needs.info.outputs.mod_id}} version ${{needs.info.outputs.version}};"
