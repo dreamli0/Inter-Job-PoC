@@ -44,5 +44,5 @@ jobs:
       needs: [ info ]
       steps:
         # - run: echo "${{needs.info.outputs.mod_id}} version ${{needs.info.outputs.version}};"
-        - run: echo "name=${{ needs.info.outputs.mod_id }}-other_values" >> $GITHUB_OUTPUT
+        - run: echo "name=${{ needs.info.outputs.mod_id }}-othervalues" >> $GITHUB_OUTPUT
         
