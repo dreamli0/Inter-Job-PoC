@@ -42,7 +42,7 @@ jobs:
       name: Output Info
       runs-on: ubuntu-latest
       needs: [ info ]
-      steps: 
+      steps:
         # - run: echo "${{needs.info.outputs.mod_id}} version ${{needs.info.outputs.version}};"
         - run: echo "name=${{ needs.info.outputs.mod_id }}-othervalues" >> $GITHUB_OUTPUT
         
