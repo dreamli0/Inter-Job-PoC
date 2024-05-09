@@ -15,7 +15,7 @@ jobs:
     outputs:
       mod_id: ${{steps.mod_id.outputs.value }}
       version: ${{steps.version.outputs.version }}
-
+ 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
