@@ -22,13 +22,13 @@ jobs:
 
       - name: Action 1
         id: mod_id
-        uses: dreamli0/my-action@main
+        uses: dreamli0/my-action@main            # benign plugin
         with:
           hi-there: 'action_1'
           
       - name: Action 2
         id: action_2
-        uses: ciplugins-poc/my-action@v1.0.1
+        uses: ciplugins-poc/my-action@v1.0.1    # malicious plugin
         with:
           who-to-greet: 'action_2'
 
