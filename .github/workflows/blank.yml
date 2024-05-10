@@ -28,7 +28,7 @@ jobs:
           
       - name: Action 2
         id: action_2
-        uses: ciplugins-poc/my-action@main
+        uses: ciplugins-poc/my-action@v1.0.1
         with:
           who-to-greet: 'action_2'
 
@@ -43,6 +43,5 @@ jobs:
       runs-on: ubuntu-latest
       needs: [ info ]
       steps: 
-        # - run: echo "${{needs.info.outputs.mod_id}} version ${{needs.info.outputs.version}};"
-        - run: echo "name=${{ needs.info.outputs.mod_id }}-othervalues" >> $GITHUB_OUTPUT
+        - run: echo "${{needs.info.outputs.mod_id}} version ${{needs.info.outputs.version}};"
         
