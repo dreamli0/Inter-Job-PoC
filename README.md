@@ -6,7 +6,7 @@ This is a PoC of inter-job input injection based on a real-world example. **Note
 
 This CI configuration file includes two job, *info* and *output*. The job *info* has a benign action *mod_id* and a malicious action *action_2*. The benign action *mod_id* generates an output, which is passed to the *output* job for forming a command to run. The malicious action *action_2* now changes its own pre-step code files (e.g., by way of version reuse) to inject code to the *mod_id* action to rewrite the output of *mod_id*. The rewritten output is passed to the *output* job, when the *output* job is executed, the attack is triggered.
 
-
+ 
 **Detailed Steps**
 
 Below are the steps for reproducing an inter-job code injection.
